@@ -12,10 +12,19 @@ export default function Home() {
   const promoTitle = "NEW RELEASE";
   const promoDescription = "This is concept art using artificial technology & Photoshop";
   const primaryButtonText = "Discover";
+
+  // images
+  const mainImageDesktop = "/images/side-view-btc.png";
+  const mainImageMobile = "/images/side-view-btc.png";
+  const firstImage = "/images/front-view-with-bg.png";
+  const secondImage = "/images/side-view-with-bg.png";
+  const thirdImage = "/images/side-view-with-bg.png";
+  const fourthImage = "/images/front-view-with-bg.png";
+
   return (
     <main className={`${inter.variable} bg-[#2f2b3c]`}>
       <div
-        className="relative h-full min-h-screen w-full overflow-x-hidden flex"
+        className="relative h-full min-h-screen w-full overflow-x-hidden flex overflow-y-auto lg:overflow-y-hidden"
         style={{ background: "linear-gradient(to top, rgba(0, 0, 0, 0.4) 20%, #2F2B3C 100%)" }}>
         {/* Mobile  */}
         <div className="lg:hidden relative w-full h-screen overflow-y-auto z-20">
@@ -56,35 +65,24 @@ export default function Home() {
 
           <div className="w-full px-2 z-40 flex flex-col gap-4 my-20">
             <img
-              src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={firstImage}
               alt="Top Left"
               className="object-cover object-center rounded-[30px] z-20"
             />
 
-            {/* Top-right Image */}
-            <img
-              src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Top Right"
-              className="object-cover rounded-[30px] z-20"
-            />
+            <img src={secondImage} alt="Top Right" className="object-cover rounded-[30px] z-20" />
 
-            {/* Bottom-left Image */}
-            <img
-              src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Bottom Left"
-              className="object-cover rounded-[30px] z-20"
-            />
+            <img src={thirdImage} alt="Bottom Left" className="object-cover rounded-[30px] z-20" />
 
-            {/* Bottom-right Image */}
             <img
-              src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={fourthImage}
               alt="Bottom Right"
               className="object-cover rounded-[30px] z-20"
             />
           </div>
 
+          {/* Promo */}
           <div className="w-full h-52 rounded-tr-[100px] bg-[#403A4C] flex p-2 pb-0 overflow-hidden z-30">
-            {/* Text Content */}
             <div className="w-[65%] flex-shrink-0 px-8 flex flex-col justify-center gap-2  z-20">
               <p className="text-[#98989D] font-semibold text-lg">{promoTitle}</p>
               <p className="text-[#8B8B91] font-semibold">{promoDescription}</p>
@@ -96,9 +94,10 @@ export default function Home() {
               </button>
             </div>
 
+            {/* images */}
             <div className="w-[35%] flex-shrink-0 overflow-hidden  z-20">
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={firstImage}
                 alt="Top Left"
                 className="object-cover object-center w-full h-full rounded-tr-[90px]  z-20"
               />
@@ -106,7 +105,7 @@ export default function Home() {
           </div>
           {/* Mobile Background Image */}
           <img
-            src="https://www.pngall.com/wp-content/uploads/13/NFT-Art-PNG.png"
+            src={mainImageMobile}
             alt="Background Image"
             className="lg:hidden fixed top-20 bottom-0 left-0 right-0 w-full h-full -z-10 pointer-events-none object-cover"
           />
@@ -116,9 +115,9 @@ export default function Home() {
 
         {/* Main image */}
         <img
-          src="https://www.pngall.com/wp-content/uploads/13/NFT-Art-PNG.png"
+          src={mainImageDesktop}
           alt="Top Left"
-          className="flex-grow hidden lg:flex object-cover object-center absolute bottom-0 w-full h-full"
+          className="flex-grow hidden top-20 lg:flex object-contain absolute bottom-0 w-full h-full"
         />
         {/* Left content */}
         <div className="flex-1 relative mt-6 pl-16 flex-col hidden lg:flex">
@@ -139,7 +138,7 @@ export default function Home() {
             {/* Image */}
             <div className="w-[35%] flex-shrink-0 overflow-hidden">
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={firstImage}
                 alt="Top Left"
                 className="object-cover object-center w-full h-full rounded-tr-[90px]"
               />
@@ -169,36 +168,36 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div className="absolute bottom-0 w-[85%] h-[50%] border-8 border-[#b5afb8] rounded-[100px] overflow-hidden">
+            <div className="absolute bottom-0 w-[85%] h-[50%] border-8 border-[#f4f4f4] rounded-[100px] overflow-hidden">
               {/* Horizontal Line */}
-              <div className="absolute inset-0 w-full h-[8px] bg-[#b5afb8] top-1/2 -translate-y-1/2 z-20"></div>
+              <div className="absolute inset-0 w-full h-[8px] bg-[#f4f4f4] top-1/2 -translate-y-1/2 z-20"></div>
               {/* Vertical Line */}
-              <div className="absolute inset-0 h-full w-[8px] bg-[#b5afb8] left-1/2 -translate-x-1/2 z-20"></div>
+              <div className="absolute inset-0 h-full w-[8px] bg-[#f4f4f4] left-1/2 -translate-x-1/2 z-20"></div>
 
               {/* Top-left Image */}
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={firstImage}
                 alt="Top Left"
                 className="absolute top-0 left-0 w-1/2 h-1/2 object-cover object-center"
               />
 
               {/* Top-right Image */}
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={secondImage}
                 alt="Top Right"
                 className="absolute top-0 right-0 w-1/2 h-1/2 object-cover"
               />
 
               {/* Bottom-left Image */}
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={thirdImage}
                 alt="Bottom Left"
                 className="absolute bottom-0 left-0 w-1/2 h-1/2 object-cover"
               />
 
               {/* Bottom-right Image */}
               <img
-                src="https://plus.unsplash.com/premium_photo-1682125067779-07c5e637137e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={fourthImage}
                 alt="Bottom Right"
                 className="absolute bottom-0 right-0 w-1/2 h-1/2 object-cover"
               />
