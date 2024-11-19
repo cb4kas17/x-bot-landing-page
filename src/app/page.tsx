@@ -15,7 +15,7 @@ export default function Home() {
 
   // images
   const mainImageDesktop = "/images/side-view-btc.png";
-  const mainImageMobile = "/images/side-view-btc.png";
+  const mainImageMobile = "/images/front-view.png";
   const firstImage = "/images/front-view-with-bg.png";
   const secondImage = "/images/side-view-with-bg.png";
   const thirdImage = "/images/side-view-with-bg.png";
@@ -67,23 +67,31 @@ export default function Home() {
             <img
               src={firstImage}
               alt="Top Left"
-              className="object-cover object-center rounded-[30px] z-20"
+              className="object-cover object-center rounded-[30px] z-20 h-[300px]"
             />
 
-            <img src={secondImage} alt="Top Right" className="object-cover rounded-[30px] z-20" />
+            <img
+              src={secondImage}
+              alt="Top Right"
+              className="object-cover rounded-[30px] z-20 h-[300px]"
+            />
 
-            <img src={thirdImage} alt="Bottom Left" className="object-cover rounded-[30px] z-20" />
+            <img
+              src={thirdImage}
+              alt="Bottom Left"
+              className="object-cover rounded-[30px] z-20 h-[300px]"
+            />
 
             <img
               src={fourthImage}
               alt="Bottom Right"
-              className="object-cover rounded-[30px] z-20"
+              className="object-cover rounded-[30px] z-20 h-[300px]"
             />
           </div>
 
           {/* Promo */}
           <div className="w-full h-52 rounded-tr-[100px] bg-[#403A4C] flex p-2 pb-0 overflow-hidden z-30">
-            <div className="w-[65%] flex-shrink-0 px-8 flex flex-col justify-center gap-2  z-20">
+            <div className="w-[65%] flex-shrink-0 px-2 flex flex-col justify-center gap-2  z-20">
               <p className="text-[#98989D] font-semibold text-lg">{promoTitle}</p>
               <p className="text-[#8B8B91] font-semibold">{promoDescription}</p>
               <button className="rounded-full border-2 w-48 flex items-center p-0.5 border-white mt-2">
