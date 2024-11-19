@@ -18,7 +18,7 @@ export default function Home() {
         className="relative h-full min-h-screen w-full overflow-x-hidden flex"
         style={{ background: "linear-gradient(to top, rgba(0, 0, 0, 0.4) 20%, #2F2B3C 100%)" }}>
         {/* Mobile  */}
-        <div className="md:hidden relative w-full h-screen overflow-y-auto z-20">
+        <div className="lg:hidden relative w-full h-screen overflow-y-auto z-20">
           {/* Mobile header */}
           <div className="flex items-center justify-between p-6 fixed w-full top-0 z-20">
             <div className="flex gap-1 flex-col items-start w-fit">
@@ -108,7 +108,7 @@ export default function Home() {
           <img
             src="https://www.pngall.com/wp-content/uploads/13/NFT-Art-PNG.png"
             alt="Background Image"
-            className="md:hidden fixed top-20 bottom-0 left-0 right-0 w-full h-full -z-10 pointer-events-none object-cover"
+            className="lg:hidden fixed top-20 bottom-0 left-0 right-0 w-full h-full -z-10 pointer-events-none object-cover"
           />
         </div>
 
@@ -118,10 +118,10 @@ export default function Home() {
         <img
           src="https://www.pngall.com/wp-content/uploads/13/NFT-Art-PNG.png"
           alt="Top Left"
-          className="flex-grow hidden md:flex object-cover object-center absolute bottom-0 w-full h-full"
+          className="flex-grow hidden lg:flex object-cover object-center absolute bottom-0 w-full h-full"
         />
         {/* Left content */}
-        <div className="flex-1 relative mt-6 pl-16 flex-col hidden md:flex">
+        <div className="flex-1 relative mt-6 pl-16 flex-col hidden lg:flex">
           <p className="text-4xl font-bold absolute">{logoText}</p>
           <h1 className="text-[120px] font-bold my-auto pb-32 pl-10">{heroText}</h1>
           <div className="absolute bottom-0 left-0 w-[600px] h-52 rounded-tr-[100px] bg-[#403A4C] flex p-2 pb-0 overflow-hidden">
@@ -147,7 +147,7 @@ export default function Home() {
           </div>
         </div>
         {/* Right content */}
-        <div className=" basis-72 bg-[#555162] hidden md:flex flex-col relative">
+        <div className=" basis-72 bg-[#555162] hidden lg:flex flex-col relative">
           <div className="flex items-center gap-4 self-center ml-10 mt-6">
             <p className="font-inter font-medium text-lg">MENU</p>
             <div className="gap-1 flex flex-col items-end w-fit">
