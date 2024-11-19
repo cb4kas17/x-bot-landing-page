@@ -155,8 +155,8 @@ export default function Home() {
         </div>
         {/* Right content */}
         <div className=" basis-72 bg-[#555162] hidden lg:flex flex-col relative">
-          <div className="flex items-center gap-4 self-center ml-10 mt-6">
-            <p className="font-inter font-medium text-lg">MENU</p>
+          <div className="flex items-center gap-4 self-center ml-10 mt-6 z-50">
+            <p className="font-inter font-medium text-lg z-50">MENU</p>
             <div className="gap-1 flex flex-col items-end w-fit">
               <span className="h-1 w-6 bg-white rounded"></span>
               <span className="h-1 w-3.5 bg-white rounded"></span>
